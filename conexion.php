@@ -10,7 +10,7 @@ function conexionBD(){
     }else{
        echo "<script>alert('Conexion exitosa')</script>";
     }
-    return conexionBD;
+   
 }
 
 ?>

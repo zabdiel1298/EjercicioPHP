@@ -13,14 +13,20 @@ if (isset($_POST['submit'])) {
     }else{
         echo "Bienvenido";
     }
-
+    
 }
     $tpl = new Smarty();
     $tpl->assign('titulo', "Menú");
     $tpl->display('header.tpl');
     $tpl->display('menu_abcs.tpl');
-    if($_GET["acc"] && $_GET["acc"]=="register_empresa"){
-        include("register_empresa.php");
+    if($_GET["acc"] && $_GET["acc"]=="menu_planes"){
+       header("location:menu_planes.php");
+    }
+     if($_GET["acc"] && $_GET["acc"]=="menu_clientes"){
+       header("location:menu_clientes.php");
+    }
+     if($_GET["acc"] && $_GET["acc"]=="menu_empresa"){
+       header("location:menu_empresa.php");
     }
 
     
