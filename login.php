@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
     $tpl->assign('titulo', "Menú");
     $tpl->display('header.tpl');
     $tpl->display('menu_abcs.tpl');
+   
     if($_GET["acc"] && $_GET["acc"]=="menu_planes"){
        header("location:menu_planes.php");
     }

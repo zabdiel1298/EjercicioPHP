@@ -17,15 +17,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>1</td>
-          <td>Juanito</td>
-          <td>1998-05-19</td>
-          <td>juanito</td>
-          <td>1234</td>
-          <td><button class="btn"><i class="fa fa-plus-circle"></i></button></td>
-          <td><button class="btn"><i class="far fa-edit"></i></button></td>
-          <td><button class="btn"><i class="fas fa-trash-alt"></i></button></td>
+          {section name=i loop=$data}
+            <tr>
+                <th scope="row">$data[i]</th>
+                <td align="center">{$data[i].id}</td>
+                <td align="center">{$data[i].nombre_cliente}</td>
+                <td align="center">{$data[i].fecha_nacimiento}</td>
+                <td align="center">{$data[i].usuario}</td>
+                <td align="center">{$data[i].contraseña}</td>
+                <td><button class="btn"><i class="fa fa-plus-circle"></i></button></td>
+                <td><button class="btn"><i class="far fa-edit"></i></button></td>
+                <td><button class="btn"><i class="fas fa-trash-alt"></i></button></td>
+            </tr>
+          {/section}
       </tbody>
     </table>

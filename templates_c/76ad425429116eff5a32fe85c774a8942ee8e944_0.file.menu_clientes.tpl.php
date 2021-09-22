@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-22 17:14:01
+/* Smarty version 3.1.39, created on 2021-09-22 18:03:54
   from 'C:\wamp64\www\templates\menu_clientes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_614b64599b1a50_86466114',
+  'unifunc' => 'content_614b700a500bf7_48314471',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '76ad425429116eff5a32fe85c774a8942ee8e944' => 
     array (
       0 => 'C:\\wamp64\\www\\templates\\menu_clientes.tpl',
-      1 => 1632330839,
+      1 => 1632333801,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_614b64599b1a50_86466114 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614b700a500bf7_48314471 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <?php echo '<script'; ?>
