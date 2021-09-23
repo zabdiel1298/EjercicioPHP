@@ -1,22 +1,15 @@
 <?php
-include 'conexion.php';
+include 'conexiones_bd.php';
 require_once 'Smarty.class.php';
-    $con=conexionBD();
-    $sql="SELECT * FROM empresa";
-    $result=mysqli_query($con,$sql);
-    if(!$result){
-        printf("Error..%s\n",mysqli_error($con));
-        exit();
-    }else{
-        $i=0;
-        $results=array();
-        while($row= mysqli_fetch_array($result)){
-            $results[]=$row;
-       }
-    }
+ $tabla="empresa";
+ getAllDataFromTable($tabla);
+ $results= getAllDataFromTable($tabla);
     $tpl = new Smarty();
     $tpl->assign('data',$results);
     $tpl->display("register_empresa.tpl");
+    
+    
+    
 if(isset($_POST['submit'])){
     $nombre_empresa = $_POST['nombre_empresa'];
     $rfc=$_POST['rfc'];
