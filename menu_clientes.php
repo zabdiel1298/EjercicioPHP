@@ -9,11 +9,14 @@ if(!$result){
     exit();
 }else{
     $i=0;
+    $results=array();
     while($row= mysqli_fetch_array($result)){
-        $results[$i++]=$row;
+        $results[]=$row;
    }
-        $tpl = new Smarty();
-        $tpl->assign('data',$results);
-        $tpl->display("menu_clientes.tpl");
 }
+ $tpl = new Smarty();
+ //print_r($results);exit(); 
+ $tpl->assign('data',$results);
+ $tpl->display("menu_clientes.tpl"); 
+      
 ?>

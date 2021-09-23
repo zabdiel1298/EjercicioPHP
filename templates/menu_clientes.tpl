@@ -5,27 +5,24 @@
       <caption>Lista de Clientes</caption>
       <thead>
         <tr>
-          <th scope="col">#</th>
           <th scope="col">ID</th>
           <th scope="col">Nombre</th>
           <th scope="col">Fecha de nacimiento</th>
           <th scope="col">Usuario</th>
           <th scope="col">Password</th>
-          <th scope="col">Agregar</th>
           <th scope="col">Editar</th>
           <th scope="col">Eliminar</th>
+          <th scope="col"><button class="btn"><i class="fa fa-plus-circle"></i></button>Agregar</th>
         </tr>
       </thead>
       <tbody>
           {section name=i loop=$data}
             <tr>
-                <th scope="row">$data[i]</th>
-                <td align="center">{$data[i].id}</td>
+                <td align="center">{$data[i].id_cliente}</td>
                 <td align="center">{$data[i].nombre_cliente}</td>
                 <td align="center">{$data[i].fecha_nacimiento}</td>
                 <td align="center">{$data[i].usuario}</td>
-                <td align="center">{$data[i].contraseña}</td>
-                <td><button class="btn"><i class="fa fa-plus-circle"></i></button></td>
+                <td align="center">{$data[i].password}</td>
                 <td><button class="btn"><i class="far fa-edit"></i></button></td>
                 <td><button class="btn"><i class="fas fa-trash-alt"></i></button></td>
             </tr>

@@ -1,4 +1,5 @@
 <?php
+
 function conexionBD(){
     session_start();
     $servidor="localhost";

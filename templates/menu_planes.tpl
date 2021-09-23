@@ -5,23 +5,23 @@
       <caption>Lista de Planes</caption>
       <thead>
         <tr>
-          <th scope="col">#</th>
           <th scope="col">ID</th>
           <th scope="col">Nombre</th>
           <th scope="col">Cantidad de clientes</th>
-          <th scope="col">Agregar</th>
           <th scope="col">Editar</th>
           <th scope="col">Eliminar</th>
+          <th scope="col"><button class="btn"><i class="fa fa-plus-circle"></i></button>Agregar plan</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td><button class="btn"><i class="fa fa-plus-circle"></i></button></td>
-          <td><button class="btn"><i class="far fa-edit"></i></button></td>
-          <td><button class="btn"><i class="fas fa-trash-alt"></i></button></td>
+        {section name=i loop=$data}
+            <tr>
+                <td align="center">{$data[i].id_planes}</td>
+                <td align="center">{$data[i].nombre_plan}</td>
+                <td align="center">{$data[i].cantidad_clientes}</td>
+                <td><button class="btn"><i class="far fa-edit"></i></button></td>
+                <td><button class="btn"><i class="fas fa-trash-alt"></i></button></td>
+            </tr>
+        {/section}
       </tbody>
     </table>

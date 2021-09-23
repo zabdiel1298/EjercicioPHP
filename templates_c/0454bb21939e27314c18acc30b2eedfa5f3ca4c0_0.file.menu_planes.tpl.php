@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-22 16:59:58
+/* Smarty version 3.1.39, created on 2021-09-23 19:41:41
   from 'C:\wamp64\www\templates\menu_planes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_614b610e0dbc09_05090729',
+  'unifunc' => 'content_614cd875a940d3_66672943',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0454bb21939e27314c18acc30b2eedfa5f3ca4c0' => 
     array (
       0 => 'C:\\wamp64\\www\\templates\\menu_planes.tpl',
-      1 => 1632329880,
+      1 => 1632425930,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_614b610e0dbc09_05090729 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614cd875a940d3_66672943 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <?php echo '<script'; ?>
@@ -30,24 +30,36 @@ function content_614b610e0dbc09_05090729 (Smarty_Internal_Template $_smarty_tpl)
       <caption>Lista de Planes</caption>
       <thead>
         <tr>
-          <th scope="col">#</th>
           <th scope="col">ID</th>
           <th scope="col">Nombre</th>
           <th scope="col">Cantidad de clientes</th>
-          <th scope="col">Agregar</th>
           <th scope="col">Editar</th>
           <th scope="col">Eliminar</th>
+          <th scope="col"><button class="btn"><i class="fa fa-plus-circle"></i></button>Agregar plan</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td><button class="btn"><i class="fa fa-plus-circle"></i></button></td>
-          <td><button class="btn"><i class="far fa-edit"></i></button></td>
-          <td><button class="btn"><i class="fas fa-trash-alt"></i></button></td>
+        <?php
+$__section_i_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['data']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_i_0_total = $__section_i_0_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
+if ($__section_i_0_total !== 0) {
+for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_0_iteration <= $__section_i_0_total; $__section_i_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
+?>
+            <tr>
+                <td align="center"><?php echo $_smarty_tpl->tpl_vars['data']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_planes'];?>
+</td>
+                <td align="center"><?php echo $_smarty_tpl->tpl_vars['data']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nombre_plan'];?>
+</td>
+                <td align="center"><?php echo $_smarty_tpl->tpl_vars['data']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['cantidad_clientes'];?>
+</td>
+                <td><button class="btn"><i class="far fa-edit"></i></button></td>
+                <td><button class="btn"><i class="fas fa-trash-alt"></i></button></td>
+            </tr>
+        <?php
+}
+}
+?>
       </tbody>
     </table><?php }
 }
