@@ -1,4 +1,5 @@
 <?php
+//clase para la conexion a la base de datos
 class conexion{
     public $servidor="localhost";
     public $usuario="root";
@@ -18,7 +19,7 @@ class conexion{
     catch(Exception $e){print_r($e);exit();}
     }   
    }
-
+//funcion para obtener todos los valores de cierta tabla mandandola como parametro
  function getAllDataFromTable($tabla){
     $con=new conexion();
     $con->conexionBD();

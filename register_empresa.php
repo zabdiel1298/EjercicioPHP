@@ -1,5 +1,5 @@
 <?php
-include 'conexiones_bd.php';
+include 'conexion_bd/conexiones_bd.php';
 require_once 'Smarty.class.php';
  $tabla="empresa";
  getAllDataFromTable($tabla);
@@ -9,7 +9,7 @@ require_once 'Smarty.class.php';
     $tpl->display("register_empresa.tpl");
     
     
-    
+  //en proceso para insertar empresa  
 if(isset($_POST['submit'])){
     $nombre_empresa = $_POST['nombre_empresa'];
     $rfc=$_POST['rfc'];
