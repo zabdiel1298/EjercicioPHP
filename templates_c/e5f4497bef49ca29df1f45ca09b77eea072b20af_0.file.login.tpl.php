@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-21 17:23:34
+/* Smarty version 3.1.39, created on 2021-09-24 19:45:58
   from 'C:\wamp64\www\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_614a15169101d7_59898119',
+  'unifunc' => 'content_614e2af611d907_41446896',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e5f4497bef49ca29df1f45ca09b77eea072b20af' => 
     array (
       0 => 'C:\\wamp64\\www\\templates\\login.tpl',
-      1 => 1632244999,
+      1 => 1632512643,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_614a15169101d7_59898119 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614e2af611d907_41446896 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
     <head>
@@ -33,17 +33,17 @@ function content_614a15169101d7_59898119 (Smarty_Internal_Template $_smarty_tpl)
     </head>
     <body>
         <div class="login-box">
-            <form action="login.php" method="POST" onsubmit="return validar();">
+            <form action="login.php" method="post">
              <h1>Iniciar Sesion</h1>
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                 <input type="text" class placeholder="Usuario" id="usuario" name="usuario">
+                 <input type="text" class placeholder="Usuario" id="usuario" name="usuario" required>
             </div>
             <div class="textbox">
                 <i class="fas fa-lock"></i>
-                 <input type="password" placeholder="Contraseña" id="password" name="password">
+                 <input type="password" placeholder="Contraseña" id="password" name="password" required>
             </div>
-            <input class="btn" type="submit" value="Aceptar" onclick="validar();" id="login" >
+            <input class="btn" type="submit" id="login" >
             </form>
       
         </div>  

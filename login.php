@@ -1,20 +1,23 @@
 <?php
-include 'conexion.php';
+require_once 'conexion_bd/conexiones_bd.php';
 require_once 'Smarty.class.php';
-$validar=0; 
-if (isset($_POST['submit'])) {
-    conexionBD();
-    $usuario = $_POST['usuario'];
-    $password = $_POST['password'];
-    $sql = "SELECT * FROM cliente where usuario='$usuario' AND contraseña='$password' ";
+    $usuario =$_POST['usuario'];
+    $password =$_POST['password']; 
+if(!isset($_POST['submit'])) {
+    $b=new conexion();
+    $b->conexionBD();
+   
+  
+    $sql=" SELECT usuario,password FROM cliente where usuario='$usuario' AND password='$password' ";
+    $result = mysqli_query($sql);
+    print_r($result);exit();
     if ($sql==0) {
-        echo "Error..usuario no registrado";
-        return 0;
+       echo "Error..usuario no registrado";
+        exit();
     }else{
         echo "Bienvenido";
+         }  
     }
-    
-}
     $tpl = new Smarty();
     $tpl->assign('titulo', "Menú");
     $tpl->display('header.tpl');

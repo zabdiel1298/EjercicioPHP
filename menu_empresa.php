@@ -1,5 +1,5 @@
 <?php
-include 'conexiones_bd.php';
+require_once  'conexion_bd/conexiones_bd.php';
 require_once 'Smarty.class.php';
  $tabla="empresa";
  getAllDataFromTable($tabla);
