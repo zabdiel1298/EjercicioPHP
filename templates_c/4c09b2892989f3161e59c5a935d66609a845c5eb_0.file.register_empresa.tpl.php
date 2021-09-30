@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-23 21:26:01
+/* Smarty version 3.1.39, created on 2021-09-28 19:50:45
   from 'C:\wamp64\www\templates\register_empresa.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_614cf0e9834a41_52392888',
+  'unifunc' => 'content_615372153a2488_64532531',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c09b2892989f3161e59c5a935d66609a845c5eb' => 
     array (
       0 => 'C:\\wamp64\\www\\templates\\register_empresa.tpl',
-      1 => 1632432359,
+      1 => 1632858639,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_614cf0e9834a41_52392888 (Smarty_Internal_Template $_smarty_tpl) {
+function content_615372153a2488_64532531 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
    <?php echo '<script'; ?>
@@ -30,22 +30,22 @@ function content_614cf0e9834a41_52392888 (Smarty_Internal_Template $_smarty_tpl)
     <div class="container">
         <div class="center">
              <div class="form-group">
-                <label for="nombre_empresa" class="col-sm-2 col-form-label">Nombre de la empresa</label>
+                <label for="nombre" class="col-sm-2 col-form-label">Nombre de la empresa</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="nombre_empresa" required>
+                  <input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa" required>
                 </div>
               </div>
               <br>
                 <div class="form-group">
-                 <label for="rfc" class="col-sm-2 col-form-label">RFC</label>
+                 <label for="rfc_1" class="col-sm-2 col-form-label">RFC</label>
                      <div class="col-sm-4">
-                         <input type="text" class="form-control" id="rfc" maxlength="12" required>
+                         <input type="text" class="form-control" id="rfc" maxlength="12" name="rfc" required>
                      </div>
                 </div>
               <br>
                 <div class="form-group">
-                 <label for="cars">Selecciona el id del plan</label>
-                 <select id="obteneridplanes">
+                 <label for="plan">Selecciona el id del plan</label>
+                 <select  name="planes" id="planes">
                     <?php
 $__section_i_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['data']->value) ? count($_loop) : max(0, (int) $_loop));
 $__section_i_0_total = $__section_i_0_loop;
@@ -54,7 +54,7 @@ if ($__section_i_0_total !== 0) {
 for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_0_iteration <= $__section_i_0_total; $__section_i_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
                         <tr>
-                          <option value="fk_id_plan"><?php echo $_smarty_tpl->tpl_vars['data']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_planes'];?>
+                          <option><?php echo $_smarty_tpl->tpl_vars['data']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_planes'];?>
 </option>
                         </tr>
                     <?php
