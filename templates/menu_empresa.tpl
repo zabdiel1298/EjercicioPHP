@@ -13,7 +13,7 @@
           <th scope="col">Id del plan</th>
           <th scope="col">Editar</th>
           <th scope="col">Eliminar</th>
-          <th scope="col"><a href="menu_empresa.php?acc=register_empresa" class="fa fa-plus-circle">Agregar empresa</th></a>
+          <th scope="col"><a href="register_empresa.php" class="fa fa-plus-circle">Agregar empresa</th></a>
         </tr>
       </thead>
       <tbody>

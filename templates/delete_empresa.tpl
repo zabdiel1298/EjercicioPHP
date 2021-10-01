@@ -5,14 +5,13 @@
     <div class="container">
         <div class="center">
             <div class="form-group">
-                    <input type="hidden" class="form-control" name="id_empresa" id="id_empresa" value="{if isset($smarty.post.id_empresa)}{$smarty.post.id_empresa}{else}{$data.id_empresa}{/if}">
-                    <h3>¿Deseas eliminar el registro?</h3>
-                    <div class="form-group row">
+                <input type="hidden" class="form-control" name="id_empresa" id="id_empresa" value="{if isset($smarty.post.id_empresa)}{$smarty.post.id_empresa}{else}{$data.id_empresa}{/if}">
+                <h3>¿Deseas eliminar el registro?</h3>
+                <div class="form-group row">
                       <div class="col-sm-10">
                         <br><button type="submit" class="btn btn-primary">Eliminar</button>                    
-                        <button type="" class="btn btn-secondary">Cancelar</button>
                       </div>
-                    </div> 
+                </div> 
             </div>  
         </div>
 </form>

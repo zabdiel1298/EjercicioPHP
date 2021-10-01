@@ -11,17 +11,16 @@
         <div class="login-box">
           <form action="login.php" method="post">
              <h1>Iniciar Sesion</h1>
-                <div class="textbox">
+             <div class="textbox">
                     <i class="fa fa-user" aria-hidden="true"></i>
                      <input type="text" class placeholder="Usuario" id="usuario" name="usuario" required>
+             </div>
+                <div class="textbox">
+                     <i class="fas fa-lock"></i>
+                     <input type="password" placeholder="Contraseña" id="password" name="password" required>
                 </div>
-                    <div class="textbox">
-                        <i class="fas fa-lock"></i>
-                         <input type="password" placeholder="Contraseña" id="password" name="password" required>
-                    </div>
-                        <input class="btn" type="submit" id="login" >
+                    <input class="btn" type="submit" id="login" >
           </form>
-      
         </div>  
     </body>
 </html>
